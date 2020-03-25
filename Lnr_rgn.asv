@@ -1,0 +1,24 @@
+%%Linear Regression
+%%  
+%%Initialising
+X=[0;8;15;38];
+Y=[32;46.4;59;71.6];
+Theta=zeros(2,1);
+%%
+%%Visualisation1
+plot(X,Y,'bx','MarkerSize', 10);
+%%
+%%Cost and Gradient
+X=[ones(4,1) X];
+iterations = 15;
+alpha = 0.01;
+J=computeCost(X,Y,Theta)
+
+Grad=computeGrad(X,Y,Theta)
+
+%%
+%%Training
+theta = gradientDescent(X, Y, Theta, alpha, iterations);
+fprintf(theta,%
+%%
+%%Visualisation2
